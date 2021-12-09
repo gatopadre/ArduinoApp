@@ -84,7 +84,7 @@ def send_order(data):
         arduino.write(data.encode())
         time.sleep(1)
         result = arduino.readline()
-        if not result:
+        if not result or result == b'\r\n':
             terminal_messages.show_message('error', 'respuesta arduino vacia.')
             return {'option':'error', 'value':'respuesta arduino vacia.'}
         result = result.decode('utf-8').strip('\n')

@@ -10,9 +10,9 @@
 /* configurations */
 void setup() {
     Serial.begin(baudrate);
-//    while (!Serial) {
-//      ; // wait for serial port to connect. Needed for native USB port only
-//    }
+   while (!Serial) {
+     ; // wait for serial port to connect. Needed for native USB port only
+   }
     pinMode(pin, OUTPUT); 
 }
 
