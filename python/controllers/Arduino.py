@@ -19,7 +19,7 @@ arduino.writeTimeout=None
 if os.name == 'nt':
     arduino.port = 'COM6' # para windows
 else:
-    arduino.port = '/dev/ttyACM0' # para linux
+    arduino.port = '/dev/ttyUSB0' # para linux
 
 def connect():
     result = False
